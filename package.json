@@ -1,0 +1,11 @@
+{
+  "name": "todo-mongodb-nodejs",
+  "version": "1.0.0",
+  "description": "A todo-applikation with express, handlebars, mongdodb and nodejs with simple styling",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Dennis Lundgren",
+  "license": "ISC"
+}
