@@ -1,0 +1,37 @@
+{{> filter}}
+{{#each todoList}}
+  {{#if done}}
+    <div class="todo" data-id="{{_id}}">
+       <div class="date{{#if changed}} changed{{/if}}">
+      <span>Skapad:
+        {{created.year}}
+        {{created.month}}
+        {{created.date}}
+        {{created.hour}}:{{created.min}}:{{created.sec}}
+      </span>
+      {{#if changed}}
+        <span>
+          Ändrad:
+          {{changed.year}}
+          {{changed.month}}
+          {{changed.date}}
+          {{changed.hour}}:{{changed.min}}:{{changed.sec}}
+        </span>
+      {{/if}}
+    </div>
+      <p>{{description}}
+        <span class="check">
+          {{#if done}}
+            <a href="/todo/done/{{_id}}/done" title="Återgå"><i
+                class="far fa-check-circle"
+              ></i></a>
+          {{else}}
+            <a href="/todo/done/{{_id}}/done" title="Klarmarkera"><i class="far fa-circle"></i></a>
+          {{/if}}
+          <a href="/todo/change/{{_id}}" title="Ändra"><i class="fas fa-exchange-alt"></i></a>
+      <a href="/todo/delete/{{_id}}" title="Ta bort"><i class="far fa-trash-alt"></i></a>
+        </span>
+      </p>
+    </div>
+  {{/if}}
+{{/each}}

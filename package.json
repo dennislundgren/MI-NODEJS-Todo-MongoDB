@@ -7,5 +7,12 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Dennis Lundgren",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "express-handlebars": "^6.0.2",
+    "mongodb": "^4.3.1",
+    "nodemon": "^2.0.15",
+    "xss": "^1.0.10"
+  }
 }
