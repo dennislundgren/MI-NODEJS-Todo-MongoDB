@@ -6,7 +6,7 @@ const { MongoClient } = require("mongodb");
 // SETTINGS //
 /////////////
 const CONNECTION_STRING =
-  "mongodb+srv://Debranch:0JaT7K6cSe5HAoLI@cluster0.o9alt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
+  "mongodb+srv://<username>:<password>@cluster0.o9alt.mongodb.net/myFirstDatabase?retryWrites=true&w=majority";
 ////////////////
 // FUNCTIONS //
 //////////////
