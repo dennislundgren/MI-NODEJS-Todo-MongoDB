@@ -19,23 +19,6 @@ const filter = {
 };
 const DB_NAME = "mi-nodejs-todo";
 const COLLECTION_NAME = "todolist";
-
-//////////////////
-// THE OLD WAY //
-////////////////
-// let todoList = [];
-// let todoDB = fs
-//   .readFileSync("././data/todo-database.json", (err, data) => {
-//     return data;
-//   })
-//   .toString();
-// if (todoDB) {
-//   todoDB = JSON.parse(todoDB);
-//   todoDB.forEach((todo) => {
-//     todoList.push(todo);
-//   });
-// }
-
 /////////////
 // ROUTES //
 ///////////
@@ -156,7 +139,7 @@ router.post("/change/:id", async (req, res) => {
 }); // Change description (POST)
 router.get("/done/:id/:from", async (req, res) => {
   const db = await getDb(DB_NAME);
-  const object = db
+  const object = await db
     .collection(COLLECTION_NAME)
     .findOne({ _id: ObjectId(req.params.id) });
 
